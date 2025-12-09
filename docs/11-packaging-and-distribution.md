@@ -31,7 +31,7 @@ OpenCode discovers local plugins via the glob pattern `plugin/*.{ts,js}` in:
 - `.opencode/` (project directory)
 - `~/.config/opencode/` (global directory)
 
-See packages/opencode/src/config/config.ts:290
+See [`packages/opencode/src/config/config.ts:290`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L290)
 
 ### npm Plugins
 
@@ -65,7 +65,7 @@ OpenCode discovers plugins from three sources:
 2. **Local directories**: Files matching `plugin/*.{ts,js}` in `.opencode/` and `~/.config/opencode/`
 3. **Default plugins**: `opencode-copilot-auth` and `opencode-anthropic-auth` (unless disabled)
 
-Config arrays from multiple sources merge and deduplicate. See packages/opencode/src/config/config.ts:25-32
+Config arrays from multiple sources merge and deduplicate. See [`packages/opencode/src/config/config.ts:25-32`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L25-L32)
 
 ### Path Resolution
 
@@ -80,7 +80,7 @@ Relative `file://` paths resolve from the config file's directory via `import.me
 }
 ```
 
-See packages/opencode/src/config/config.ts:830-836
+See [`packages/opencode/src/config/config.ts:830-836`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L830-L836)
 
 ### Disabling Default Plugins
 
@@ -90,7 +90,7 @@ Set the environment variable to skip built-in auth plugins:
 OPENCODE_DISABLE_DEFAULT_PLUGINS=1 opencode
 ```
 
-See packages/opencode/src/plugin/index.ts:30-33
+See [`packages/opencode/src/plugin/index.ts:30-33`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/plugin/index.ts#L30-L33)
 
 ## Dependency Management
 
@@ -103,7 +103,7 @@ OpenCode installs npm plugins to a shared cache at `~/.cache/opencode/node_modul
 3. Retries up to 3 times with exponential backoff (500ms, 1000ms, 1500ms)
 4. Records the resolved version in the cache's `package.json`
 
-See packages/opencode/src/bun/index.ts:63-144
+See [`packages/opencode/src/bun/index.ts:63-144`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/bun/index.ts#L63-L144)
 
 ### Local Plugin Dependencies
 
@@ -115,7 +115,7 @@ bun add @opencode-ai/plugin@<version> --exact
 
 This runs when OpenCode loads the plugin directory. A `.gitignore` is created to exclude `node_modules`, `package.json`, and `bun.lock`.
 
-See packages/opencode/src/config/config.ts:159-178
+See [`packages/opencode/src/config/config.ts:159-178`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L159-L178)
 
 ## Loading Sequence
 
@@ -144,7 +144,7 @@ OpenCode loads plugins once at startup in this order:
    └── Subscribe hook.event?() to event bus
 ```
 
-See packages/opencode/src/plugin/index.ts:14-53
+See [`packages/opencode/src/plugin/index.ts:14-53`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/plugin/index.ts#L14-L53)
 
 ## Publishing to npm
 

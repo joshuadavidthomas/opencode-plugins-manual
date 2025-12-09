@@ -47,7 +47,7 @@ The config object is mutable. Your hook modifies it directly.
 
 Commands provide slash-commands that users can invoke from the prompt.
 
-**Schema** (packages/opencode/src/config/config.ts:375-382):
+**Schema** ([`packages/opencode/src/config/config.ts:375-382`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L375-L382)):
 
 ```typescript
 {
@@ -99,7 +99,7 @@ Commands appear in the `/` command menu immediately after plugin load. Test with
 
 Agents are specialized personas that handle specific types of tasks.
 
-**Schema** (packages/opencode/src/config/config.ts:384-419):
+**Schema** ([`packages/opencode/src/config/config.ts:384-419`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L384-L419)):
 
 ```typescript
 {
@@ -178,7 +178,7 @@ See `.opencode/plugin/test-injection.ts` for a verified working example.
 
 MCP (Model Context Protocol) servers provide additional tools to the model.
 
-**Local MCP Schema** (packages/opencode/src/config/config.ts:305-326):
+**Local MCP Schema** ([`packages/opencode/src/config/config.ts:305-326`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L305-L326)):
 
 ```typescript
 {
@@ -190,7 +190,7 @@ MCP (Model Context Protocol) servers provide additional tools to the model.
 }
 ```
 
-**Remote MCP Schema** (packages/opencode/src/config/config.ts:343-367):
+**Remote MCP Schema** ([`packages/opencode/src/config/config.ts:343-367`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L343-L367)):
 
 ```typescript
 {

@@ -8,7 +8,7 @@ OpenCode plugins subscribe to events through the `event` hook. The event system 
 
 > As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
-The event bus lives in `packages/opencode/src/bus/index.ts:7-142`. Three functions define the pattern:
+The event bus lives in [`packages/opencode/src/bus/index.ts:7-142`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/bus/index.ts#L7-L142). Three functions define the pattern:
 
 - `Bus.event(type, schema)` - Define an event with Zod schema
 - `Bus.publish(event, properties)` - Emit an event
@@ -29,7 +29,7 @@ export const Event = {
 }
 ```
 
-Source: `packages/opencode/src/session/index.ts:88-93`
+Source: [`packages/opencode/src/session/index.ts:88-93`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/index.ts#L88-L93)
 
 ### Publishing Events
 
@@ -41,7 +41,7 @@ await Bus.publish(Session.Event.Created, { info: sessionInfo })
 
 The bus delivers the event to all subscribers listening for that type plus wildcard subscribers.
 
-Source: `packages/opencode/src/bus/index.ts:78-101`
+Source: [`packages/opencode/src/bus/index.ts:78-101`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/bus/index.ts#L78-L101)
 
 ### Subscribing in Plugins
 
@@ -65,7 +65,7 @@ The `event` hook receives all events. Filter by `event.type`.
 
 ### Session Events
 
-> Defined in `packages/opencode/src/session/index.ts:87-120`
+> Defined in [`packages/opencode/src/session/index.ts:87-120`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/index.ts#L87-L120)
 
 | Event             | Payload                                   | When                     |
 | ----------------- | ----------------------------------------- | ------------------------ |
@@ -77,7 +77,7 @@ The `event` hook receives all events. Filter by `event.type`.
 
 ### Session Status Events
 
-> Defined in `packages/opencode/src/session/status.ts:26-41`
+> Defined in [`packages/opencode/src/session/status.ts:26-41`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/status.ts#L26-L41)
 
 | Event            | Payload                               | When                              |
 | ---------------- | ------------------------------------- | --------------------------------- |
@@ -88,7 +88,7 @@ Use `session.status` to detect when the agent finishes work. The `session.idle` 
 
 ### Session Compaction Events
 
-> Defined in `packages/opencode/src/session/compaction.ts:24-30`
+> Defined in [`packages/opencode/src/session/compaction.ts:24-30`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/compaction.ts#L24-L30)
 
 | Event               | Payload                 | When                      |
 | ------------------- | ----------------------- | ------------------------- |
@@ -96,7 +96,7 @@ Use `session.status` to detect when the agent finishes work. The `session.idle` 
 
 ### Message Events
 
-> Defined in `packages/opencode/src/session/message-v2.ts:377-406`
+> Defined in [`packages/opencode/src/session/message-v2.ts:377-406`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/message-v2.ts#L377-L406)
 
 | Event                  | Payload                                                    | When                 |
 | ---------------------- | ---------------------------------------------------------- | -------------------- |
@@ -107,13 +107,13 @@ Use `session.status` to detect when the agent finishes work. The `session.idle` 
 
 ### File Events
 
-> Defined in `packages/opencode/src/file/index.ts:113-120`
+> Defined in [`packages/opencode/src/file/index.ts:113-120`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/file/index.ts#L113-L120)
 
 | Event         | Payload            | When                              |
 | ------------- | ------------------ | --------------------------------- |
 | `file.edited` | `{ file: string }` | File modified via write/edit tool |
 
-> Defined in `packages/opencode/src/file/watcher.ts:18-26`
+> Defined in [`packages/opencode/src/file/watcher.ts:18-26`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/file/watcher.ts#L18-L26)
 
 | Event                  | Payload                                              | When                        |
 | ---------------------- | ---------------------------------------------------- | --------------------------- |
@@ -123,7 +123,7 @@ The `file.edited` event fires when the agent modifies a file. The `file.watcher.
 
 ### Permission Events
 
-> Defined in `packages/opencode/src/permission/index.ts:40-50`
+> Defined in [`packages/opencode/src/permission/index.ts:40-50`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/permission/index.ts#L40-L50)
 
 | Event                | Payload                                                         | When                               |
 | -------------------- | --------------------------------------------------------------- | ---------------------------------- |
@@ -132,7 +132,7 @@ The `file.edited` event fires when the agent modifies a file. The `file.watcher.
 
 ### Command Events
 
-> Defined in `packages/opencode/src/command/index.ts:11-19`
+> Defined in [`packages/opencode/src/command/index.ts:11-19`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/command/index.ts#L11-L19)
 
 | Event              | Payload                                                                     | When               |
 | ------------------ | --------------------------------------------------------------------------- | ------------------ |
@@ -140,7 +140,7 @@ The `file.edited` event fires when the agent modifies a file. The `file.watcher.
 
 ### Todo Events
 
-> Defined in `packages/opencode/src/session/todo.ts:17-24`
+> Defined in [`packages/opencode/src/session/todo.ts:17-24`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/todo.ts#L17-L24)
 
 | Event          | Payload                                | When              |
 | -------------- | -------------------------------------- | ----------------- |
@@ -148,7 +148,7 @@ The `file.edited` event fires when the agent modifies a file. The `file.watcher.
 
 ### TUI Events
 
-> Defined in `packages/opencode/src/cli/cmd/tui/event.ts:4-39`
+> Defined in [`packages/opencode/src/cli/cmd/tui/event.ts:4-39`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/cli/cmd/tui/event.ts#L4-L39)
 
 | Event                 | Payload                                                                   | When                    |
 | --------------------- | ------------------------------------------------------------------------- | ----------------------- |
@@ -158,13 +158,13 @@ The `file.edited` event fires when the agent modifies a file. The `file.watcher.
 
 ### LSP Events
 
-> Defined in `packages/opencode/src/lsp/index.ts:15-17`
+> Defined in [`packages/opencode/src/lsp/index.ts:15-17`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/lsp/index.ts#L15-L17)
 
 | Event         | Payload | When              |
 | ------------- | ------- | ----------------- |
 | `lsp.updated` | `{}`    | LSP state changes |
 
-> Defined in `packages/opencode/src/lsp/client.ts:28-37`
+> Defined in [`packages/opencode/src/lsp/client.ts:28-37`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/lsp/client.ts#L28-L37)
 
 | Event                    | Payload                                                         | When                 |
 | ------------------------ | --------------------------------------------------------------- | -------------------- |
@@ -172,7 +172,7 @@ The `file.edited` event fires when the agent modifies a file. The `file.watcher.
 
 ### PTY Events
 
-> Defined in `packages/opencode/src/pty/index.ts:76-79`
+> Defined in [`packages/opencode/src/pty/index.ts:76-79`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/pty/index.ts#L76-L79)
 
 | Event         | Payload                            | When                |
 | ------------- | ---------------------------------- | ------------------- |
@@ -183,7 +183,7 @@ The `file.edited` event fires when the agent modifies a file. The `file.watcher.
 
 ### VCS Events
 
-> Defined in `packages/opencode/src/project/vcs.ts:13-19`
+> Defined in [`packages/opencode/src/project/vcs.ts:13-19`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/project/vcs.ts#L13-L19)
 
 | Event                | Payload               | When               |
 | -------------------- | --------------------- | ------------------ |
@@ -191,7 +191,7 @@ The `file.edited` event fires when the agent modifies a file. The `file.watcher.
 
 ### Installation Events
 
-> Defined in `packages/opencode/src/installation/index.ts:20-32`
+> Defined in [`packages/opencode/src/installation/index.ts:20-32`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/installation/index.ts#L20-L32)
 
 | Event                           | Payload               | When                      |
 | ------------------------------- | --------------------- | ------------------------- |
@@ -200,7 +200,7 @@ The `file.edited` event fires when the agent modifies a file. The `file.watcher.
 
 ### IDE Events
 
-> Defined in `packages/opencode/src/ide/index.ts:19-25`
+> Defined in [`packages/opencode/src/ide/index.ts:19-25`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/ide/index.ts#L19-L25)
 
 | Event           | Payload           | When                   |
 | --------------- | ----------------- | ---------------------- |
@@ -278,7 +278,7 @@ export const MyPlugin: Plugin = async (ctx) => ({
 })
 ```
 
-Source: `packages/plugin/src/index.ts:18-32`
+Source: [`packages/plugin/src/index.ts:18-32`](https://github.com/sst/opencode/blob/3efc95b/packages/plugin/src/index.ts#L18-L32)
 
 ## Wildcard Subscriptions
 
@@ -290,7 +290,7 @@ Bus.subscribeAll((event) => {
 })
 ```
 
-Source: `packages/opencode/src/bus/index.ts:122-124`
+Source: [`packages/opencode/src/bus/index.ts:122-124`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/bus/index.ts#L122-L124)
 
 Plugins use the `event` hook, which is a wildcard subscription. Filter events in your handler.
 
@@ -300,7 +300,7 @@ Events are scoped to the current OpenCode instance (project directory). Each pro
 
 When an instance disposes, the bus publishes a `server.instance.disposed` event to cleanup subscriptions.
 
-Source: `packages/opencode/src/bus/index.ts:16-37`
+Source: [`packages/opencode/src/bus/index.ts:16-37`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/bus/index.ts#L16-L37)
 
 ## Direct Subscription (Advanced)
 
@@ -322,17 +322,17 @@ This requires importing types from the OpenCode core package, which plugin autho
 
 | Category         | Events                                                          | Source                                                                                  |
 | ---------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| **Session**      | created, updated, deleted, diff, error, status, idle, compacted | `session/index.ts:87-120`<br>`session/status.ts:26-41`<br>`session/compaction.ts:24-30` |
-| **Message**      | updated, removed, part.updated, part.removed                    | `session/message-v2.ts:377-406`                                                         |
-| **File**         | edited, watcher.updated                                         | `file/index.ts:113-120`<br>`file/watcher.ts:18-26`                                      |
-| **Permission**   | updated, replied                                                | `permission/index.ts:40-50`                                                             |
-| **Command**      | executed                                                        | `command/index.ts:11-19`                                                                |
-| **Todo**         | updated                                                         | `session/todo.ts:17-24`                                                                 |
-| **TUI**          | prompt.append, command.execute, toast.show                      | `cli/cmd/tui/event.ts:4-39`                                                             |
-| **LSP**          | updated, client.diagnostics                                     | `lsp/index.ts:15-17`<br>`lsp/client.ts:28-37`                                           |
-| **PTY**          | created, updated, exited, deleted                               | `pty/index.ts:76-79`                                                                    |
-| **VCS**          | branch.updated                                                  | `project/vcs.ts:13-19`                                                                  |
-| **Installation** | updated, update.available                                       | `installation/index.ts:20-32`                                                           |
-| **IDE**          | installed                                                       | `ide/index.ts:19-25`                                                                    |
+| **Session**      | created, updated, deleted, diff, error, status, idle, compacted | [`session/index.ts:87-120`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/index.ts#L87-L120)<br>[`session/status.ts:26-41`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/status.ts#L26-L41)<br>[`session/compaction.ts:24-30`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/compaction.ts#L24-L30) |
+| **Message**      | updated, removed, part.updated, part.removed                    | [`session/message-v2.ts:377-406`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/message-v2.ts#L377-L406) |
+| **File**         | edited, watcher.updated                                         | [`file/index.ts:113-120`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/file/index.ts#L113-L120)<br>[`file/watcher.ts:18-26`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/file/watcher.ts#L18-L26) |
+| **Permission**   | updated, replied                                                | [`permission/index.ts:40-50`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/permission/index.ts#L40-L50) |
+| **Command**      | executed                                                        | [`command/index.ts:11-19`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/command/index.ts#L11-L19) |
+| **Todo**         | updated                                                         | [`session/todo.ts:17-24`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/todo.ts#L17-L24) |
+| **TUI**          | prompt.append, command.execute, toast.show                      | [`cli/cmd/tui/event.ts:4-39`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/cli/cmd/tui/event.ts#L4-L39) |
+| **LSP**          | updated, client.diagnostics                                     | [`lsp/index.ts:15-17`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/lsp/index.ts#L15-L17)<br>[`lsp/client.ts:28-37`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/lsp/client.ts#L28-L37) |
+| **PTY**          | created, updated, exited, deleted                               | [`pty/index.ts:76-79`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/pty/index.ts#L76-L79) |
+| **VCS**          | branch.updated                                                  | [`project/vcs.ts:13-19`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/project/vcs.ts#L13-L19) |
+| **Installation** | updated, update.available                                       | [`installation/index.ts:20-32`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/installation/index.ts#L20-L32) |
+| **IDE**          | installed                                                       | [`ide/index.ts:19-25`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/ide/index.ts#L19-L25) |
 
 All event definitions include Zod schemas for validation and type inference.

@@ -52,7 +52,7 @@ type PluginInput = {
 type Plugin = (input: PluginInput) => Promise<Hooks>
 ```
 
-See packages/plugin/src/index.ts:25-33
+See [`packages/plugin/src/index.ts:25-33`](https://github.com/sst/opencode/blob/3efc95b/packages/plugin/src/index.ts#L25-L33)
 
 ### Available Hooks
 
@@ -71,7 +71,7 @@ All hooks are optional. Implement only what you need:
 | `tool.execute.after`         | Function                                     | Post-execution hook               |
 | `experimental.text.complete` | Function                                     | Post-generation text modification |
 
-See packages/plugin/src/index.ts:144-182 for complete type definitions.
+See [`packages/plugin/src/index.ts:144-182`](https://github.com/sst/opencode/blob/3efc95b/packages/plugin/src/index.ts#L144-L182) for complete type definitions.
 
 ## Step-by-Step: Your First Plugin
 
@@ -131,7 +131,7 @@ Plugins load at startup. Restart OpenCode to load your plugin:
 # Plugins log "loading plugin" with their path
 ```
 
-See packages/opencode/src/plugin/index.ts:35 for loading logs.
+See [`packages/opencode/src/plugin/index.ts:35`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/plugin/index.ts#L35) for loading logs.
 
 ### 4. Test Your Plugin
 
@@ -159,7 +159,7 @@ export const EventPlugin: Plugin = async (ctx) => ({
 })
 ```
 
-Available events: command.executed, file.edited, file.watcher.updated, lsp.client.diagnostics, message.updated, session.created, session.idle, tool.execute.after, and more. See packages/web/src/content/docs/plugins.mdx:68-127 for complete list.
+Available events: command.executed, file.edited, file.watcher.updated, lsp.client.diagnostics, message.updated, session.created, session.idle, tool.execute.after, and more. See [`packages/web/src/content/docs/plugins.mdx:68-127`](https://github.com/sst/opencode/blob/3efc95b/packages/web/src/content/docs/plugins.mdx#L68-L127) for complete list.
 
 ### Custom Tool
 
@@ -188,7 +188,7 @@ export const TimestampPlugin: Plugin = async (ctx) => ({
 })
 ```
 
-Tools use Zod schemas via `tool.schema`. See packages/plugin/src/tool.ts:10-19.
+Tools use Zod schemas via `tool.schema`. See [`packages/plugin/src/tool.ts:10-19`](https://github.com/sst/opencode/blob/3efc95b/packages/plugin/src/tool.ts#L10-L19).
 
 ### Command Injection
 
@@ -205,7 +205,7 @@ export const CommandPlugin: Plugin = async (ctx) => ({
 })
 ```
 
-Command schema supports: `template` (required), `description`, `agent`, `model`, `subtask`. See packages/opencode/src/config/config.ts:375-382.
+Command schema supports: `template` (required), `description`, `agent`, `model`, `subtask`. See [`packages/opencode/src/config/config.ts:375-382`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L375-L382).
 
 ### Agent Injection
 
@@ -223,7 +223,7 @@ export const AgentPlugin: Plugin = async (ctx) => ({
 })
 ```
 
-Agent schema supports: `prompt`, `description`, `mode` (subagent|primary|all), `model`, `temperature`, `top_p`, `tools`, `maxSteps`, `color`, `permission`. See packages/opencode/src/config/config.ts:384-419.
+Agent schema supports: `prompt`, `description`, `mode` (subagent|primary|all), `model`, `temperature`, `top_p`, `tools`, `maxSteps`, `color`, `permission`. See [`packages/opencode/src/config/config.ts:384-419`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L384-L419).
 
 ### Tool Interception
 
@@ -308,7 +308,7 @@ bun add my-opencode-plugin
 }
 ```
 
-OpenCode resolves npm packages and installs them if missing. See packages/opencode/src/plugin/index.ts:36-41.
+OpenCode resolves npm packages and installs them if missing. See [`packages/opencode/src/plugin/index.ts:36-41`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/plugin/index.ts#L36-L41).
 
 ## Local Development with file://
 
@@ -332,7 +332,7 @@ Plugins log when they load:
 [plugin] loading plugin { path: 'file://.opencode/plugin/example.ts' }
 ```
 
-See packages/opencode/src/plugin/index.ts:35.
+See [`packages/opencode/src/plugin/index.ts:35`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/plugin/index.ts#L35).
 
 ### Console Logging
 

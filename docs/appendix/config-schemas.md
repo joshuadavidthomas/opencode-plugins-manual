@@ -4,7 +4,7 @@
 
 Complete schemas for command, agent, and MCP configuration.
 
-Source: `packages/opencode/src/config/config.ts`
+Source: [`packages/opencode/src/config/config.ts`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts)
 
 ## Command Schema
 
@@ -20,7 +20,7 @@ Commands define reusable prompts with placeholders.
 }
 ```
 
-Source: `config.ts:375-382`
+Source: [`config.ts:375-382`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L375-L382)
 
 ### Example
 
@@ -91,7 +91,7 @@ Agents are specialized configurations with system prompts and tool access.
 }
 ```
 
-Source: `config.ts:384-419`
+Source: [`config.ts:384-419`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L384-L419)
 
 ### Example
 
@@ -218,7 +218,7 @@ Run MCP server as local process.
 }
 ```
 
-Source: `config.ts:305-326`
+Source: [`config.ts:305-326`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L305-L326)
 
 **Example**:
 
@@ -278,7 +278,7 @@ Connect to MCP server over HTTP.
 }
 ```
 
-Source: `config.ts:343-367`
+Source: [`config.ts:343-367`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L343-L367)
 
 **Example**:
 
@@ -343,7 +343,7 @@ OAuth authentication for remote MCP servers.
 }
 ```
 
-Source: `config.ts:328-340`
+Source: [`config.ts:328-340`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L328-L340)
 
 **Example**:
 
@@ -406,7 +406,7 @@ Config files support file references:
 
 Relative paths resolved from config file location.
 
-Source: `config.ts:757-797`
+Source: [`config.ts:757-797`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L757-L797)
 
 ## Permission Values
 
@@ -420,7 +420,7 @@ type Permission = "ask" | "allow" | "deny"
 - `"allow"`: Auto-approve without prompt
 - `"deny"`: Auto-deny without prompt
 
-Source: `config.ts:372-373`
+Source: [`config.ts:372-373`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/config/config.ts#L372-L373)
 
 ## Model Format
 

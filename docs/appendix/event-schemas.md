@@ -4,7 +4,7 @@
 
 Complete event type definitions and payload schemas.
 
-Source: `packages/sdk/js/src/gen/types.gen.ts`
+Source: [`packages/sdk/js/src/gen/types.gen.ts`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts)
 
 ## Session Events
 
@@ -44,7 +44,7 @@ Source: `packages/sdk/js/src/gen/types.gen.ts`
 }
 ```
 
-Source: `types.gen.ts:562-567`
+Source: [`types.gen.ts:562-567`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L562-L567)
 
 ### session.updated
 
@@ -57,7 +57,7 @@ Source: `types.gen.ts:562-567`
 }
 ```
 
-Source: `types.gen.ts:569-574`
+Source: [`types.gen.ts:569-574`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L569-L574)
 
 ### session.deleted
 
@@ -70,7 +70,7 @@ Source: `types.gen.ts:569-574`
 }
 ```
 
-Source: `types.gen.ts:576-581`
+Source: [`types.gen.ts:576-581`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L576-L581)
 
 ### session.status
 
@@ -87,7 +87,7 @@ Source: `types.gen.ts:576-581`
 }
 ```
 
-Source: `types.gen.ts:467-473`
+Source: [`types.gen.ts:467-473`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L467-L473)
 
 ### session.idle
 
@@ -100,7 +100,7 @@ Source: `types.gen.ts:467-473`
 }
 ```
 
-Source: `types.gen.ts:475-480`
+Source: [`types.gen.ts:475-480`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L475-L480)
 
 ### session.compacted
 
@@ -113,7 +113,7 @@ Source: `types.gen.ts:475-480`
 }
 ```
 
-Source: `types.gen.ts:482-487`
+Source: [`types.gen.ts:482-487`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L482-L487)
 
 ### session.diff
 
@@ -133,7 +133,7 @@ Source: `types.gen.ts:482-487`
 }
 ```
 
-Source: `types.gen.ts:583-589`
+Source: [`types.gen.ts:583-589`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L583-L589)
 
 ### session.error
 
@@ -152,7 +152,7 @@ Source: `types.gen.ts:583-589`
 }
 ```
 
-Source: `types.gen.ts:591-597`
+Source: [`types.gen.ts:591-597`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L591-L597)
 
 ## Message Events
 
@@ -213,7 +213,7 @@ Source: `types.gen.ts:591-597`
 }
 ```
 
-Source: `types.gen.ts:145-150`
+Source: [`types.gen.ts:145-150`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L145-L150)
 
 ### message.removed
 
@@ -227,7 +227,7 @@ Source: `types.gen.ts:145-150`
 }
 ```
 
-Source: `types.gen.ts:152-158`
+Source: [`types.gen.ts:152-158`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L152-L158)
 
 ### message.part.updated
 
@@ -256,7 +256,7 @@ Source: `types.gen.ts:152-158`
 - `CompactionPart`: `{ id, sessionID, messageID, type: "compaction", auto }`
 - `SubtaskPart`: `{ id, sessionID, messageID, type: "subtask", prompt, description, agent }`
 
-Source: `types.gen.ts:160-412`
+Source: [`types.gen.ts:160-412`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L160-L412)
 
 ### message.part.removed
 
@@ -271,7 +271,7 @@ Source: `types.gen.ts:160-412`
 }
 ```
 
-Source: `types.gen.ts:414-421`
+Source: [`types.gen.ts:414-421`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L414-L421)
 
 ## File Events
 
@@ -286,7 +286,7 @@ Source: `types.gen.ts:414-421`
 }
 ```
 
-Source: `types.gen.ts:489-494`
+Source: [`types.gen.ts:489-494`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L489-L494)
 
 ### file.watcher.updated
 
@@ -300,7 +300,7 @@ Source: `types.gen.ts:489-494`
 }
 ```
 
-Source: `types.gen.ts:599-605`
+Source: [`types.gen.ts:599-605`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L599-L605)
 
 ## Permission Events
 
@@ -323,7 +323,7 @@ Source: `types.gen.ts:599-605`
 }
 ```
 
-Source: `types.gen.ts:439-442`
+Source: [`types.gen.ts:439-442`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L439-L442)
 
 ### permission.replied
 
@@ -338,7 +338,7 @@ Source: `types.gen.ts:439-442`
 }
 ```
 
-Source: `types.gen.ts:444-451`
+Source: [`types.gen.ts:444-451`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L444-L451)
 
 ## Command Events
 
@@ -356,7 +356,7 @@ Source: `types.gen.ts:444-451`
 }
 ```
 
-Source: `types.gen.ts:523-531`
+Source: [`types.gen.ts:523-531`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L523-L531)
 
 ## Todo Events
 
@@ -377,7 +377,7 @@ Source: `types.gen.ts:523-531`
 }
 ```
 
-Source: `types.gen.ts:515-521`
+Source: [`types.gen.ts:515-521`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L515-L521)
 
 ## TUI Events
 
@@ -392,7 +392,7 @@ Source: `types.gen.ts:515-521`
 }
 ```
 
-Source: `types.gen.ts:614-619`
+Source: [`types.gen.ts:614-619`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L614-L619)
 
 ### tui.command.execute
 
@@ -420,7 +420,7 @@ Source: `types.gen.ts:614-619`
 }
 ```
 
-Source: `types.gen.ts:621-644`
+Source: [`types.gen.ts:621-644`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L621-L644)
 
 ### tui.toast.show
 
@@ -436,7 +436,7 @@ Source: `types.gen.ts:621-644`
 }
 ```
 
-Source: `types.gen.ts:645-656`
+Source: [`types.gen.ts:645-656`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L645-L656)
 
 ## PTY Events
 
@@ -459,7 +459,7 @@ Source: `types.gen.ts:645-656`
 }
 ```
 
-Source: `types.gen.ts:668-673`
+Source: [`types.gen.ts:668-673`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L668-L673)
 
 ### pty.updated
 
@@ -472,7 +472,7 @@ Source: `types.gen.ts:668-673`
 }
 ```
 
-Source: `types.gen.ts:675-680`
+Source: [`types.gen.ts:675-680`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L675-L680)
 
 ### pty.exited
 
@@ -486,7 +486,7 @@ Source: `types.gen.ts:675-680`
 }
 ```
 
-Source: `types.gen.ts:682-688`
+Source: [`types.gen.ts:682-688`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L682-L688)
 
 ### pty.deleted
 
@@ -499,7 +499,7 @@ Source: `types.gen.ts:682-688`
 }
 ```
 
-Source: `types.gen.ts:690-695`
+Source: [`types.gen.ts:690-695`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L690-L695)
 
 ## LSP Events
 
@@ -512,7 +512,7 @@ Source: `types.gen.ts:690-695`
 }
 ```
 
-Source: `types.gen.ts:32-37`
+Source: [`types.gen.ts:32-37`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L32-L37)
 
 ### lsp.client.diagnostics
 
@@ -526,7 +526,7 @@ Source: `types.gen.ts:32-37`
 }
 ```
 
-Source: `types.gen.ts:24-30`
+Source: [`types.gen.ts:24-30`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L24-L30)
 
 ## VCS Events
 
@@ -541,7 +541,7 @@ Source: `types.gen.ts:24-30`
 }
 ```
 
-Source: `types.gen.ts:607-612`
+Source: [`types.gen.ts:607-612`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L607-L612)
 
 ## Installation Events
 
@@ -556,7 +556,7 @@ Source: `types.gen.ts:607-612`
 }
 ```
 
-Source: `types.gen.ts:10-15`
+Source: [`types.gen.ts:10-15`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L10-L15)
 
 ### installation.update-available
 
@@ -569,7 +569,7 @@ Source: `types.gen.ts:10-15`
 }
 ```
 
-Source: `types.gen.ts:17-22`
+Source: [`types.gen.ts:17-22`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L17-L22)
 
 ## Server Events
 
@@ -582,7 +582,7 @@ Source: `types.gen.ts:17-22`
 }
 ```
 
-Source: `types.gen.ts:697-702`
+Source: [`types.gen.ts:697-702`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L697-L702)
 
 ### server.instance.disposed
 
@@ -595,7 +595,7 @@ Source: `types.gen.ts:697-702`
 }
 ```
 
-Source: `types.gen.ts:3-8`
+Source: [`types.gen.ts:3-8`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L3-L8)
 
 ## Global Event Wrapper
 
@@ -608,7 +608,7 @@ All events are wrapped in a `GlobalEvent` when received via the global event str
 }
 ```
 
-Source: `types.gen.ts:738-741`
+Source: [`types.gen.ts:738-741`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/types.gen.ts#L738-L741)
 
 ## See Also
 

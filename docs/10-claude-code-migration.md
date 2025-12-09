@@ -376,7 +376,7 @@ tool: {
 }
 ```
 
-Source: `packages/plugin/src/tool.ts:10-19`
+Source: [`packages/plugin/src/tool.ts:10-19`](https://github.com/sst/opencode/blob/3efc95b/packages/plugin/src/tool.ts#L10-L19)
 
 ### Auth Providers
 

@@ -8,7 +8,7 @@ Plugins register custom tools that the model can invoke. Custom tools extend Ope
 
 The `tool()` helper creates tool definitions with type safety.
 
-**Location:** packages/plugin/src/tool.ts:10-19
+**Location:** [`packages/plugin/src/tool.ts:10-19`](https://github.com/sst/opencode/blob/3efc95b/packages/plugin/src/tool.ts#L10-L19)
 
 **Type signature:**
 
@@ -50,7 +50,7 @@ timestamp() // Returns: "2025-12-09T18:30:00.000Z"
 
 Use `tool.schema` (Zod) to define typed arguments.
 
-**Available via:** `tool.schema.*` (packages/plugin/src/tool.ts:17)
+**Available via:** `tool.schema.*` ([`packages/plugin/src/tool.ts:17`](https://github.com/sst/opencode/blob/3efc95b/packages/plugin/src/tool.ts#L17))
 
 The `tool.schema` object is Zod (`z` from `"zod"`). All Zod types are available.
 
@@ -405,7 +405,7 @@ export const MyPlugin: Plugin = async (ctx) => {
 
 Tools register during plugin initialization.
 
-**Location:** packages/opencode/src/tool/registry.ts:45-50
+**Location:** [`packages/opencode/src/tool/registry.ts:45-50`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/tool/registry.ts#L45-L50)
 
 **Process:**
 

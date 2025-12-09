@@ -264,7 +264,7 @@ The loader returns an object that becomes available to other parts of your plugi
 
 > As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
-Full type definitions in `packages/plugin/src/index.ts:35-142`:
+Full type definitions in [`packages/plugin/src/index.ts:35-142`](https://github.com/sst/opencode/blob/3efc95b/packages/plugin/src/index.ts#L35-L142):
 
 ```typescript
 export type AuthHook = {
@@ -357,7 +357,7 @@ export const MyPlugin: Plugin = async (ctx) => {
 }
 ```
 
-Source: `packages/plugin/src/index.ts:18-32`
+Source: [`packages/plugin/src/index.ts:18-32`](https://github.com/sst/opencode/blob/3efc95b/packages/plugin/src/index.ts#L18-L32)
 
 ## Official Auth Plugins
 

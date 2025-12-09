@@ -241,7 +241,7 @@ Process incoming user messages before they're sent to the model.
 
 **Mutates:** The `output` object directly.
 
-**Triggered:** When user submits a message (packages/opencode/src/session/prompt.ts:1046).
+**Triggered:** When user submits a message ([`packages/opencode/src/session/prompt.ts:1046`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/prompt.ts#L1046)).
 
 **Example:**
 
@@ -302,7 +302,7 @@ Modify parameters sent to the LLM.
 
 **Mutates:** The `output` object directly.
 
-**Triggered:** Before each LLM request (packages/opencode/src/session/prompt.ts:920).
+**Triggered:** Before each LLM request ([`packages/opencode/src/session/prompt.ts:920`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/prompt.ts#L920)).
 
 **Example:**
 
@@ -345,7 +345,7 @@ Handle permission requests before they're shown to the user.
 
 **Mutates:** The `output` object directly.
 
-**Triggered:** When a tool requires permission (packages/opencode/src/permission/index.ts:81).
+**Triggered:** When a tool requires permission ([`packages/opencode/src/permission/index.ts:81`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/permission/index.ts#L81)).
 
 **Example:**
 
@@ -400,7 +400,7 @@ Intercept tool calls before execution.
 
 **Mutates:** The `output` object directly.
 
-**Triggered:** Before every tool execution (packages/opencode/src/session/prompt.ts:983 and :1007).
+**Triggered:** Before every tool execution ([`packages/opencode/src/session/prompt.ts:983`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/prompt.ts#L983) and [`:1007`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/prompt.ts#L1007)).
 
 **Example:**
 
@@ -459,7 +459,7 @@ Intercept tool results after execution.
 
 **Mutates:** The `output` object directly.
 
-**Triggered:** After every tool execution (packages/opencode/src/session/prompt.ts:995 and :1020).
+**Triggered:** After every tool execution ([`packages/opencode/src/session/prompt.ts:995`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/prompt.ts#L995) and [`:1020`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/prompt.ts#L1020)).
 
 **Example:**
 
@@ -515,7 +515,7 @@ Modify text after the model generates it.
 
 **Mutates:** The `output` object directly.
 
-**Triggered:** After text generation completes (packages/opencode/src/session/processor.ts:73).
+**Triggered:** After text generation completes ([`packages/opencode/src/session/processor.ts:73`](https://github.com/sst/opencode/blob/3efc95b/packages/opencode/src/session/processor.ts#L73)).
 
 **Example:**
 

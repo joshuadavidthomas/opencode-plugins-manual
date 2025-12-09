@@ -4,7 +4,7 @@
 
 Complete reference for `ctx.client` methods.
 
-Source: `packages/sdk/js/src/gen/sdk.gen.ts`
+Source: [`packages/sdk/js/src/gen/sdk.gen.ts`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts)
 
 ## Client Structure
 
@@ -48,7 +48,7 @@ for await (const event of stream) {
 
 **Returns**: Server-Sent Events stream of `GlobalEvent`
 
-Source: `sdk.gen.ts:236-242`
+Source: [`sdk.gen.ts:236-242`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L236-L242)
 
 ## project
 
@@ -77,7 +77,7 @@ Project = {
 }
 ```
 
-Source: `sdk.gen.ts:248-253`
+Source: [`sdk.gen.ts:248-253`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L248-L253)
 
 ### project.current(options?)
 
@@ -93,7 +93,7 @@ const project = await client.project.current()
 
 **Returns**: `Project`
 
-Source: `sdk.gen.ts:258-263`
+Source: [`sdk.gen.ts:258-263`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L258-L263)
 
 ## session
 
@@ -108,7 +108,7 @@ const sessions = await client.session.list({ query: { directory: "/path" } })
 
 **Returns**: `Array<Session>`
 
-Source: `sdk.gen.ts:435-440`
+Source: [`sdk.gen.ts:435-440`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L435-L440)
 
 ### session.create(options?)
 
@@ -123,7 +123,7 @@ const session = await client.session.create({
 
 **Returns**: `Session`
 
-Source: `sdk.gen.ts:445-454`
+Source: [`sdk.gen.ts:445-454`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L445-L454)
 
 ### session.get(options)
 
@@ -139,7 +139,7 @@ const session = await client.session.get({ path: { id: "session-id" } })
 
 **Returns**: `Session`
 
-Source: `sdk.gen.ts:479-484`
+Source: [`sdk.gen.ts:479-484`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L479-L484)
 
 ### session.update(options)
 
@@ -159,7 +159,7 @@ await client.session.update({
 
 **Returns**: `Session`
 
-Source: `sdk.gen.ts:489-498`
+Source: [`sdk.gen.ts:489-498`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L489-L498)
 
 ### session.delete(options)
 
@@ -171,7 +171,7 @@ await client.session.delete({ path: { id: "session-id" } })
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:469-474`
+Source: [`sdk.gen.ts:469-474`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L469-L474)
 
 ### session.status(options?)
 
@@ -183,7 +183,7 @@ const status = await client.session.status()
 
 **Returns**: `SessionStatus` (idle | busy | retry)
 
-Source: `sdk.gen.ts:459-464`
+Source: [`sdk.gen.ts:459-464`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L459-L464)
 
 ### session.children(options)
 
@@ -195,7 +195,7 @@ const children = await client.session.children({ path: { id: "session-id" } })
 
 **Returns**: `Array<Session>`
 
-Source: `sdk.gen.ts:503-508`
+Source: [`sdk.gen.ts:503-508`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L503-L508)
 
 ### session.todo(options)
 
@@ -216,7 +216,7 @@ Todo = {
 }
 ```
 
-Source: `sdk.gen.ts:513-518`
+Source: [`sdk.gen.ts:513-518`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L513-L518)
 
 ### session.messages(options)
 
@@ -228,7 +228,7 @@ const messages = await client.session.messages({ path: { id: "session-id" } })
 
 **Returns**: `Array<Message>` (UserMessage | AssistantMessage)
 
-Source: `sdk.gen.ts:605-610`
+Source: [`sdk.gen.ts:605-610`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L605-L610)
 
 ### session.message(options)
 
@@ -242,7 +242,7 @@ const message = await client.session.message({
 
 **Returns**: `Message`
 
-Source: `sdk.gen.ts:629-634`
+Source: [`sdk.gen.ts:629-634`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L629-L634)
 
 ### session.prompt(options)
 
@@ -269,7 +269,7 @@ const result = await client.session.prompt({
 
 **Returns**: `Message`
 
-Source: `sdk.gen.ts:615-624`
+Source: [`sdk.gen.ts:615-624`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L615-L624)
 
 ### session.promptAsync(options)
 
@@ -286,7 +286,7 @@ Same parameters as `session.prompt()` but returns immediately.
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:639-648`
+Source: [`sdk.gen.ts:639-648`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L639-L648)
 
 ### session.command(options)
 
@@ -307,7 +307,7 @@ await client.session.command({
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:653-662`
+Source: [`sdk.gen.ts:653-662`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L653-L662)
 
 ### session.shell(options)
 
@@ -327,7 +327,7 @@ const output = await client.session.shell({
 
 **Returns**: `string`
 
-Source: `sdk.gen.ts:667-676`
+Source: [`sdk.gen.ts:667-676`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L667-L676)
 
 ### session.fork(options)
 
@@ -342,7 +342,7 @@ const newSession = await client.session.fork({
 
 **Returns**: `Session`
 
-Source: `sdk.gen.ts:537-546`
+Source: [`sdk.gen.ts:537-546`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L537-L546)
 
 ### session.abort(options)
 
@@ -354,7 +354,7 @@ await client.session.abort({ path: { id: "session-id" } })
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:551-556`
+Source: [`sdk.gen.ts:551-556`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L551-L556)
 
 ### session.share(options)
 
@@ -366,7 +366,7 @@ const result = await client.session.share({ path: { id: "session-id" } })
 
 **Returns**: `{ url: string }`
 
-Source: `sdk.gen.ts:571-576`
+Source: [`sdk.gen.ts:571-576`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L571-L576)
 
 ### session.unshare(options)
 
@@ -378,7 +378,7 @@ await client.session.unshare({ path: { id: "session-id" } })
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:561-566`
+Source: [`sdk.gen.ts:561-566`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L561-L566)
 
 ### session.diff(options)
 
@@ -390,7 +390,7 @@ const diff = await client.session.diff({ path: { id: "session-id" } })
 
 **Returns**: `Array<FileDiff>`
 
-Source: `sdk.gen.ts:581-586`
+Source: [`sdk.gen.ts:581-586`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L581-L586)
 
 ### session.summarize(options)
 
@@ -402,7 +402,7 @@ await client.session.summarize({ path: { id: "session-id" } })
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:591-600`
+Source: [`sdk.gen.ts:591-600`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L591-L600)
 
 ### session.revert(options)
 
@@ -417,7 +417,7 @@ await client.session.revert({
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:681-690`
+Source: [`sdk.gen.ts:681-690`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L681-L690)
 
 ### session.unrevert(options)
 
@@ -429,7 +429,7 @@ await client.session.unrevert({ path: { id: "session-id" } })
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:695-700`
+Source: [`sdk.gen.ts:695-700`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L695-L700)
 
 ### session.init(options)
 
@@ -444,7 +444,7 @@ await client.session.init({
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:523-532`
+Source: [`sdk.gen.ts:523-532`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L523-L532)
 
 ## config
 
@@ -458,7 +458,7 @@ const config = await client.config.get()
 
 **Returns**: `Config` (see `appendix/config-schemas.md`)
 
-Source: `sdk.gen.ts:341-346`
+Source: [`sdk.gen.ts:341-346`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L341-L346)
 
 ### config.update(options?)
 
@@ -475,7 +475,7 @@ await client.config.update({
 
 **Returns**: `Config`
 
-Source: `sdk.gen.ts:351-360`
+Source: [`sdk.gen.ts:351-360`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L351-L360)
 
 ### config.providers(options?)
 
@@ -487,7 +487,7 @@ const providers = await client.config.providers()
 
 **Returns**: `Array<Provider>`
 
-Source: `sdk.gen.ts:365-370`
+Source: [`sdk.gen.ts:365-370`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L365-L370)
 
 ## command
 
@@ -512,7 +512,7 @@ Command = {
 }
 ```
 
-Source: `sdk.gen.ts:707-712`
+Source: [`sdk.gen.ts:707-712`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L707-L712)
 
 ## app
 
@@ -526,7 +526,7 @@ const agents = await client.app.agents()
 
 **Returns**: `Array<Agent>`
 
-Source: `sdk.gen.ts:858-863`
+Source: [`sdk.gen.ts:858-863`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L858-L863)
 
 ### app.log(options?)
 
@@ -540,7 +540,7 @@ await client.app.log({
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:844-853`
+Source: [`sdk.gen.ts:844-853`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L844-L853)
 
 ## tool
 
@@ -554,7 +554,7 @@ const toolIds = await client.tool.ids()
 
 **Returns**: `Array<string>`
 
-Source: `sdk.gen.ts:377-382`
+Source: [`sdk.gen.ts:377-382`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L377-L382)
 
 ### tool.list(options)
 
@@ -576,7 +576,7 @@ ToolListItem = {
 }
 ```
 
-Source: `sdk.gen.ts:387-392`
+Source: [`sdk.gen.ts:387-392`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L387-L392)
 
 ## provider
 
@@ -590,7 +590,7 @@ const providers = await client.provider.list()
 
 **Returns**: `Array<Provider>`
 
-Source: `sdk.gen.ts:757-762`
+Source: [`sdk.gen.ts:757-762`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L757-L762)
 
 ### provider.auth(options?)
 
@@ -602,7 +602,7 @@ const methods = await client.provider.auth()
 
 **Returns**: `Array<{ id: string; methods: Array<ProviderAuthMethod> }>`
 
-Source: `sdk.gen.ts:767-772`
+Source: [`sdk.gen.ts:767-772`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L767-L772)
 
 ### provider.oauth.authorize(options)
 
@@ -617,7 +617,7 @@ const auth = await client.provider.oauth.authorize({
 
 **Returns**: `ProviderAuthAuthorization`
 
-Source: `sdk.gen.ts:719-732`
+Source: [`sdk.gen.ts:719-732`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L719-L732)
 
 ### provider.oauth.callback(options)
 
@@ -632,7 +632,7 @@ await client.provider.oauth.callback({
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:737-750`
+Source: [`sdk.gen.ts:737-750`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L737-L750)
 
 ## mcp
 
@@ -646,7 +646,7 @@ const statuses = await client.mcp.status()
 
 **Returns**: `Record<string, McpStatus>`
 
-Source: `sdk.gen.ts:932-937`
+Source: [`sdk.gen.ts:932-937`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L932-L937)
 
 ### mcp.add(options?)
 
@@ -666,7 +666,7 @@ await client.mcp.add({
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:942-951`
+Source: [`sdk.gen.ts:942-951`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L942-L951)
 
 ### mcp.connect(options)
 
@@ -678,7 +678,7 @@ await client.mcp.connect({ path: { name: "my-server" } })
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:956-961`
+Source: [`sdk.gen.ts:956-961`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L956-L961)
 
 ### mcp.disconnect(options)
 
@@ -690,7 +690,7 @@ await client.mcp.disconnect({ path: { name: "my-server" } })
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:966-971`
+Source: [`sdk.gen.ts:966-971`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L966-L971)
 
 ### mcp.auth.remove(options)
 
@@ -702,7 +702,7 @@ await client.mcp.auth.remove({ path: { name: "my-server" } })
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:870-875`
+Source: [`sdk.gen.ts:870-875`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L870-L875)
 
 ### mcp.auth.start(options)
 
@@ -714,7 +714,7 @@ const url = await client.mcp.auth.start({ path: { name: "my-server" } })
 
 **Returns**: `{ url: string }`
 
-Source: `sdk.gen.ts:880-885`
+Source: [`sdk.gen.ts:880-885`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L880-L885)
 
 ### mcp.auth.callback(options)
 
@@ -729,7 +729,7 @@ await client.mcp.auth.callback({
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:890-899`
+Source: [`sdk.gen.ts:890-899`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L890-L899)
 
 ### mcp.auth.authenticate(options)
 
@@ -741,7 +741,7 @@ await client.mcp.auth.authenticate({ path: { name: "my-server" } })
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:904-911`
+Source: [`sdk.gen.ts:904-911`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L904-L911)
 
 ## lsp
 
@@ -764,7 +764,7 @@ LspStatus = {
 }
 ```
 
-Source: `sdk.gen.ts:980-985`
+Source: [`sdk.gen.ts:980-985`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L980-L985)
 
 ## formatter
 
@@ -786,7 +786,7 @@ FormatterStatus = {
 }
 ```
 
-Source: `sdk.gen.ts:992-997`
+Source: [`sdk.gen.ts:992-997`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L992-L997)
 
 ## file
 
@@ -812,7 +812,7 @@ FileNode = {
 }
 ```
 
-Source: `sdk.gen.ts:812-817`
+Source: [`sdk.gen.ts:812-817`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L812-L817)
 
 ### file.read(options)
 
@@ -837,7 +837,7 @@ FileContent = {
 }
 ```
 
-Source: `sdk.gen.ts:822-827`
+Source: [`sdk.gen.ts:822-827`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L822-L827)
 
 ### file.status(options?)
 
@@ -858,7 +858,7 @@ File = {
 }
 ```
 
-Source: `sdk.gen.ts:832-837`
+Source: [`sdk.gen.ts:832-837`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L832-L837)
 
 ## find
 
@@ -874,7 +874,7 @@ const results = await client.find.text({
 
 **Returns**: `Array<string>` (file paths)
 
-Source: `sdk.gen.ts:780-785`
+Source: [`sdk.gen.ts:780-785`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L780-L785)
 
 ### find.files(options)
 
@@ -888,7 +888,7 @@ const files = await client.find.files({
 
 **Returns**: `Array<string>` (file paths)
 
-Source: `sdk.gen.ts:790-795`
+Source: [`sdk.gen.ts:790-795`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L790-L795)
 
 ### find.symbols(options)
 
@@ -910,7 +910,7 @@ Symbol = {
 }
 ```
 
-Source: `sdk.gen.ts:800-805`
+Source: [`sdk.gen.ts:800-805`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L800-L805)
 
 ## path
 
@@ -933,7 +933,7 @@ Path = {
 }
 ```
 
-Source: `sdk.gen.ts:411-416`
+Source: [`sdk.gen.ts:411-416`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L411-L416)
 
 ## vcs
 
@@ -953,7 +953,7 @@ VcsInfo = {
 }
 ```
 
-Source: `sdk.gen.ts:423-428`
+Source: [`sdk.gen.ts:423-428`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L423-L428)
 
 ## pty
 
@@ -967,7 +967,7 @@ const sessions = await client.pty.list()
 
 **Returns**: `Array<Pty>`
 
-Source: `sdk.gen.ts:271-276`
+Source: [`sdk.gen.ts:271-276`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L271-L276)
 
 ### pty.create(options?)
 
@@ -986,7 +986,7 @@ const pty = await client.pty.create({
 
 **Returns**: `Pty`
 
-Source: `sdk.gen.ts:281-290`
+Source: [`sdk.gen.ts:281-290`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L281-L290)
 
 ### pty.get(options)
 
@@ -998,7 +998,7 @@ const pty = await client.pty.get({ path: { id: "pty-id" } })
 
 **Returns**: `Pty`
 
-Source: `sdk.gen.ts:305-310`
+Source: [`sdk.gen.ts:305-310`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L305-L310)
 
 ### pty.update(options)
 
@@ -1013,7 +1013,7 @@ await client.pty.update({
 
 **Returns**: `Pty`
 
-Source: `sdk.gen.ts:315-324`
+Source: [`sdk.gen.ts:315-324`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L315-L324)
 
 ### pty.remove(options)
 
@@ -1025,7 +1025,7 @@ await client.pty.remove({ path: { id: "pty-id" } })
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:295-300`
+Source: [`sdk.gen.ts:295-300`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L295-L300)
 
 ### pty.connect(options)
 
@@ -1037,7 +1037,7 @@ await client.pty.connect({ path: { id: "pty-id" } })
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:329-334`
+Source: [`sdk.gen.ts:329-334`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L329-L334)
 
 ## tui
 
@@ -1051,7 +1051,7 @@ await client.tui.appendPrompt({ body: { text: "Hello" } })
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:1030-1039`
+Source: [`sdk.gen.ts:1030-1039`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L1030-L1039)
 
 ### tui.openHelp(options?)
 
@@ -1063,7 +1063,7 @@ await client.tui.openHelp()
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:1044-1049`
+Source: [`sdk.gen.ts:1044-1049`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L1044-L1049)
 
 ### tui.openSessions(options?)
 
@@ -1075,7 +1075,7 @@ await client.tui.openSessions()
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:1054-1059`
+Source: [`sdk.gen.ts:1054-1059`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L1054-L1059)
 
 ### tui.openThemes(options?)
 
@@ -1087,7 +1087,7 @@ await client.tui.openThemes()
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:1064-1069`
+Source: [`sdk.gen.ts:1064-1069`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L1064-L1069)
 
 ### tui.openModels(options?)
 
@@ -1099,7 +1099,7 @@ await client.tui.openModels()
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:1074-1079`
+Source: [`sdk.gen.ts:1074-1079`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L1074-L1079)
 
 ### tui.submitPrompt(options?)
 
@@ -1111,7 +1111,7 @@ await client.tui.submitPrompt()
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:1084-1089`
+Source: [`sdk.gen.ts:1084-1089`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L1084-L1089)
 
 ### tui.clearPrompt(options?)
 
@@ -1123,7 +1123,7 @@ await client.tui.clearPrompt()
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:1094-1099`
+Source: [`sdk.gen.ts:1094-1099`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L1094-L1099)
 
 ### tui.executeCommand(options?)
 
@@ -1135,7 +1135,7 @@ await client.tui.executeCommand({ body: { command: "agent.cycle" } })
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:1104-1113`
+Source: [`sdk.gen.ts:1104-1113`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L1104-L1113)
 
 ### tui.showToast(options?)
 
@@ -1154,7 +1154,7 @@ await client.tui.showToast({
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:1118-1127`
+Source: [`sdk.gen.ts:1118-1127`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L1118-L1127)
 
 ### tui.publish(options?)
 
@@ -1166,7 +1166,7 @@ await client.tui.publish({ body: { event: "custom-event" } })
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:1132-1141`
+Source: [`sdk.gen.ts:1132-1141`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L1132-L1141)
 
 ### tui.control.next(options?)
 
@@ -1178,7 +1178,7 @@ const request = await client.tui.control.next()
 
 **Returns**: `unknown`
 
-Source: `sdk.gen.ts:1004-1009`
+Source: [`sdk.gen.ts:1004-1009`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L1004-L1009)
 
 ### tui.control.response(options?)
 
@@ -1190,7 +1190,7 @@ await client.tui.control.response({ body: { response: "value" } })
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:1014-1023`
+Source: [`sdk.gen.ts:1014-1023`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L1014-L1023)
 
 ## auth
 
@@ -1210,7 +1210,7 @@ await client.auth.set({
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:916-925`
+Source: [`sdk.gen.ts:916-925`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L916-L925)
 
 ## instance
 
@@ -1224,7 +1224,7 @@ await client.instance.dispose()
 
 **Returns**: `boolean`
 
-Source: `sdk.gen.ts:399-404`
+Source: [`sdk.gen.ts:399-404`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L399-L404)
 
 ## event
 
@@ -1241,7 +1241,7 @@ for await (const event of stream) {
 
 **Returns**: Server-Sent Events stream of `Event`
 
-Source: `sdk.gen.ts:1149-1154`
+Source: [`sdk.gen.ts:1149-1154`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts#L1149-L1154)
 
 ## See Also
 

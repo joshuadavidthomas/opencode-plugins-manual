@@ -12,7 +12,7 @@ type PluginInput = {
 }
 ```
 
-See packages/plugin/src/index.ts:25-31
+See [`packages/plugin/src/index.ts:25-31`](https://github.com/sst/opencode/blob/3efc95b/packages/plugin/src/index.ts#L25-L31)
 
 ## client: SDK Client
 
@@ -109,7 +109,7 @@ The SDK client mirrors the OpenCode API. Major namespaces:
 | `client.provider` | list, auth                                             | Authentication providers   |
 | `client.tui`      | appendPrompt, showToast, executeCommand                | TUI interactions           |
 
-See packages/sdk/js/src/gen/sdk.gen.ts for complete API surface.
+See [`packages/sdk/js/src/gen/sdk.gen.ts`](https://github.com/sst/opencode/blob/3efc95b/packages/sdk/js/src/gen/sdk.gen.ts) for complete API surface.
 
 ## project: Project Information
 
@@ -240,7 +240,7 @@ Use `worktree` for project-wide operations. Use `directory` for operations relat
 
 The `$` field is Bun's shell API for executing commands. It provides a tagged template for running shell commands with pipes, redirects, and environment variables.
 
-See packages/plugin/src/shell.ts for type definitions.
+See [`packages/plugin/src/shell.ts`](https://github.com/sst/opencode/blob/3efc95b/packages/plugin/src/shell.ts) for type definitions.
 
 ### Basic Usage
 
