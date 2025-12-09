@@ -1,6 +1,6 @@
 # OpenCode Plugins: The Missing Manual
 
-Documentation for OpenCode plugin authors, including undocumented features and Claude Code migration patterns.
+Documentation for OpenCode plugins, including undocumented features and Claude Code migration patterns.
 
 **Source commit**: 3efc95b15<br />
 **Last refreshed**: 2025-12-09
@@ -20,14 +20,6 @@ This manual fills those gaps with working examples and source references.
 I created this because I wanted to write plugins but grew tired of thin documentation and constant source diving, whether searching manually or using an LLM to research the codebase.
 
 I've tried to establish guardrails around the documentation process by providing direct source access, using structured prompts, and coordinating specialized agents to verify examples. However, these docs are entirely LLM-generated and may contain hallucinations or inaccuracies. Always verify against the OpenCode source code, and please open an issue if you find errors.
-
-## Quick Start
-
-**New to OpenCode plugins?** Start with [01-overview.md](docs/01-overview.md)
-
-**Migrating from Claude Code?** Jump to [10-claude-code-migration.md](docs/10-claude-code-migration.md)
-
-**Curious how this was made?** See [00-about.md](docs/00-about.md)
 
 ## Contents
 
