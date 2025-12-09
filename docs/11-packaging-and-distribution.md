@@ -64,8 +64,6 @@ Register by package name with optional version:
 }
 ```
 
-If you omit the version, OpenCode installs `latest`.
-
 ### Versioning & Updates
 
 **Pin your versions.** OpenCode uses Bun's lockfile (`~/.cache/opencode/bun.lock`) which pins resolved versions. If you specify a plugin without a version:
@@ -201,7 +199,7 @@ See [`packages/opencode/src/plugin/index.ts:14-53`](https://github.com/sst/openc
 
 ## Plugin Behavior & Isolation
 
-Understanding how plugins interact helps you write robust plugins and debug issues.
+Understanding how plugins interact helps you write reliable plugins and debug issues.
 
 ### All Exports Are Loaded
 
@@ -269,7 +267,7 @@ Plugins run in the same process with full access to:
 - **Environment variables** (`process.env`)
 - **SDK client** (shared instance)
 
-All plugins receive the same `PluginInput` object. There's no isolation between plugins.
+All plugins receive the same `PluginInput` object. All plugins share the same context.
 
 ### Tool ID Conflicts
 
@@ -299,11 +297,11 @@ export const PluginA: Plugin = async (ctx) => ({
 })
 ```
 
-This enables plugin composition but requires care—don't assume the output object is pristine.
+This enables plugin composition but requires care—other plugins may have already modified the output.
 
 ### No Timeouts
 
-OpenCode does **not** set timeouts on:
+OpenCode runs these without timeouts:
 
 - Plugin installation (`bun add`)
 - Module import (`import()`)
@@ -487,13 +485,7 @@ Both use `.mjs` with minimal `package.json` configurations. View the source to s
 
 ### npm Install Fails
 
-OpenCode retries installations 3 times. If all attempts fail, check:
-
-- Network connectivity
-- Package name spelling
-- Version exists on npm registry
-
-The error `BunInstallFailedError` includes the package name and version.
+OpenCode retries installations 3 times. The error `BunInstallFailedError` includes the package name and version.
 
 ### TypeScript Errors
 
@@ -503,13 +495,7 @@ If you want to catch errors before publishing an npm plugin, run `tsc --noEmit` 
 
 ### Cache Issues
 
-Clear the plugin cache:
-
-```bash
-rm -rf ~/.cache/opencode/node_modules ~/.cache/opencode/bun.lock
-```
-
-OpenCode reinstalls plugins on next launch. See [Versioning & Updates](#versioning--updates) for version-specific issues.
+See [Stuck on an Old Version?](#stuck-on-an-old-version) for clearing the plugin cache.
 
 ### Plugin Hangs on Startup
 

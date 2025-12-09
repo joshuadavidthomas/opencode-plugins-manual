@@ -1,9 +1,5 @@
 # Plugin Configuration
 
-This document covers how to add configuration options to your plugin, allowing users to customize behavior without modifying code.
-
-## Why Plugin Configuration
-
 Complex plugins often need user-customizable settings:
 
 - Enable/disable features
@@ -249,55 +245,12 @@ Recommended locations (in order of precedence):
 | `./.opencode/my-plugin.json` | Project | Keep config with other OpenCode files |
 | `~/.config/opencode/my-plugin.json` | Global | User-wide defaults |
 
-## Example: oh-my-opencode Configuration
-
-[oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode) demonstrates a complete configuration system:
-
-**Configuration file (`oh-my-opencode.json`):**
-
-```json
-{
-  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
-  "disabled_agents": ["oracle"],
-  "disabled_mcps": ["websearch_exa"],
-  "agents": {
-    "explore": {
-      "model": "anthropic/claude-haiku-4-5",
-      "temperature": 0.5
-    }
-  }
-}
-```
-
-**Features:**
-- Disable built-in agents or MCP servers
-- Override agent settings (model, temperature, prompt)
-- JSON Schema for IDE autocomplete
-- Zod validation with helpful error messages
-
 ## Best Practices
 
-1. **Use sensible defaults.** Plugin should work without any configuration.
+1. **Validate early.** Parse and validate config during plugin initialization, not during hook execution.
 
-2. **Validate early.** Parse and validate config during plugin initialization, not during hook execution.
+2. **Fail gracefully.** Invalid config should log a warning and fall back to defaults, not crash.
 
-3. **Fail gracefully.** Invalid config should log a warning and fall back to defaults, not crash.
-
-4. **Document options.** Include a README section explaining each configuration option.
-
-5. **Version your schema.** When adding breaking changes, consider versioning your config format.
-
-6. **Keep it simple.** Start with minimal configuration and add options as users request them.
-
-## Summary
-
-Plugin configuration follows this pattern:
-
-1. **Schema** — Define with Zod for validation and type inference
-2. **Loader** — Read from project/global locations with fallbacks
-3. **JSON Schema** — Generate for IDE autocomplete
-4. **Types** — Export for TypeScript users
-
-This gives users flexibility while keeping your plugin maintainable.
+3. **Version your schema.** When adding breaking changes, consider versioning your config format.
 
 **Reference implementation:** [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode)

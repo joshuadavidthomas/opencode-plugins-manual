@@ -6,13 +6,6 @@ This document covers advanced patterns for building production-quality plugins, 
 
 Simple plugins define hooks inline. Complex plugins need **stateful hooks**—hooks that track information across invocations. The factory pattern makes this manageable.
 
-### The Problem
-
-Hooks are called repeatedly, but sometimes you need to:
-- Track which sessions have been processed
-- Accumulate data across tool calls
-- Avoid duplicate actions
-
 ### The Factory Pattern
 
 Create a factory function that returns hook handlers with access to shared state:
@@ -58,13 +51,6 @@ export function createContextWindowMonitorHook(ctx: PluginInput) {
 ```
 
 **Real-world example:** [oh-my-opencode/src/hooks/context-window-monitor.ts](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/hooks/context-window-monitor.ts)
-
-### Benefits
-
-1. **Encapsulation** — State is hidden inside the factory closure
-2. **Testability** — Create fresh instances for testing
-3. **Reusability** — Same factory can create multiple independent instances
-4. **Type safety** — TypeScript infers types from the factory function
 
 ## Hook Composition
 
@@ -141,18 +127,7 @@ export default MyPlugin
 
 ## State Lifecycle Management
 
-Plugins that track per-session state must clean up to avoid memory leaks.
-
-### The Problem
-
-```typescript
-const sessionData = new Map<string, SessionState>()
-
-// This grows forever if you don't clean up!
-sessionData.set(sessionID, { ... })
-```
-
-### The Solution: Clean Up on Session Events
+Plugins that track per-session state must clean up to avoid memory leaks. Clean up on session events:
 
 ```typescript
 export function createStatefulHook(ctx: PluginInput) {
@@ -196,8 +171,6 @@ export function createStatefulHook(ctx: PluginInput) {
 
 ## SDK Client Advanced Usage
 
-The `ctx.client` SDK provides powerful capabilities beyond basic hooks.
-
 ### Sending Prompts Programmatically
 
 Inject messages into a session:
@@ -211,11 +184,6 @@ await ctx.client.session.prompt({
   query: { directory: ctx.directory },
 })
 ```
-
-**Use cases:**
-- Auto-continue after recoverable errors
-- Inject follow-up prompts from hooks
-- Trigger actions based on session state
 
 **Real-world example:** [oh-my-opencode/src/index.ts:205-211](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/index.ts#L205-L211)
 
@@ -243,11 +211,6 @@ const response = await ctx.client.session.messages({
 const messages = response.data ?? response
 const assistantMessages = messages.filter(m => m.info.role === "assistant")
 ```
-
-**Use cases:**
-- Calculate token usage
-- Analyze conversation patterns
-- Find specific message types
 
 **Real-world example:** [oh-my-opencode/src/hooks/context-window-monitor.ts:48-67](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/hooks/context-window-monitor.ts#L48-L67)
 
@@ -284,8 +247,6 @@ const isSubsession = !!parentSessionId
 **Real-world example:** [oh-my-opencode/src/hooks/claude-code-hooks/index.ts:72-77](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/hooks/claude-code-hooks/index.ts#L72-L77)
 
 ## Error Recovery Patterns
-
-Robust plugins handle errors gracefully.
 
 ### Detecting Recoverable Errors
 
@@ -399,16 +360,3 @@ Your context window is ${usage}% full. Consider:
 | Grep Output Truncator | Output mutation | [grep-output-truncator.ts](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/hooks/grep-output-truncator.ts) |
 | Think Mode Switcher | Event detection + state tracking | [think-mode/index.ts](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/hooks/think-mode/index.ts) |
 | Terminal Title Updates | Event handling + external effects | [index.ts:147-235](https://github.com/code-yeongyu/oh-my-opencode/blob/master/src/index.ts#L147-L235) |
-
-## Summary
-
-Advanced plugin development uses these patterns:
-
-1. **Hook Factories** — Create stateful hooks with closures
-2. **Hook Composition** — Combine multiple handlers in one plugin
-3. **State Lifecycle** — Clean up on session events to prevent leaks
-4. **SDK Client** — Use advanced methods for complex interactions
-5. **Error Recovery** — Detect, handle, and recover from errors gracefully
-6. **Output Mutation** — Append context, truncate, or add warnings
-
-**Reference implementation:** [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode) demonstrates all these patterns in production.
