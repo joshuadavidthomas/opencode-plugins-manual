@@ -7,7 +7,7 @@ Documentation for OpenCode plugin authors, including undocumented features and C
 
 ## What This Is
 
-The official OpenCode plugin documentation covers basics, but leaves you needing to source dive or navigate TypeScript types to understand:
+The official OpenCode plugin documentation covers basics, but requires examining source code or navigating TypeScript types to understand:
 
 - Config hook injection (commands, agents, MCP servers)
 - Full hooks interface reference
@@ -15,7 +15,11 @@ The official OpenCode plugin documentation covers basics, but leaves you needing
 - SDK client documentation
 - Claude Code migration patterns
 
-This manual attempts to fill those gaps with working examples and source references.
+This manual fills those gaps with working examples and source references.
+
+I created this because I wanted to write plugins but grew tired of thin documentation and constant source diving, whether searching manually or using an LLM to research the codebase.
+
+I've tried to establish guardrails around the documentation process by providing direct source access, using structured prompts, and coordinating specialized agents to verify examples. However, these docs are entirely LLM-generated and may contain hallucinations or inaccuracies. Always verify against the OpenCode source code, and please open an issue if you find errors.
 
 ## Quick Start
 
@@ -47,7 +51,7 @@ This manual attempts to fill those gaps with working examples and source referen
 
 ### Artifacts
 
-For those curious on how this manual was created, the artifacts, commands, and agents are contained in the [artifacts/](artifacts/) directory, including:
+For those curious about how this manual was created, the artifacts, commands, and agents are contained in the [artifacts/](artifacts/) directory, including:
 
 - [Research](artifacts/research.md) - OpenCode vs Claude Code analysis
 - [Plan](artifacts/plan.md) - Execution plan with subagent prompts
