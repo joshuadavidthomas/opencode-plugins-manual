@@ -34,6 +34,7 @@ I've tried to establish guardrails around the documentation process by providing
 - **[08-sdk-client.md](docs/08-sdk-client.md)** - Client API overview
 - **[09-auth-hook.md](docs/09-auth-hook.md)** - Auth providers (OAuth/API key)
 - **[10-claude-code-migration.md](docs/10-claude-code-migration.md)** - Feature mapping for Claude Code authors
+- **[11-packaging-and-distribution.md](11-packaging-and-distribution.md)** - Build requirements, plugin discovery, npm publishing
 
 ### Appendices
 

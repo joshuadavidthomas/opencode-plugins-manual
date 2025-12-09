@@ -50,6 +50,7 @@ Each subagent explored the codebase using specialized agents and verified all co
 - **[08-sdk-client.md](08-sdk-client.md)** - Client API overview with source pointers
 - **[09-auth-hook.md](09-auth-hook.md)** - Auth providers (OAuth/API key)
 - **[10-claude-code-migration.md](10-claude-code-migration.md)** - Feature mapping for Claude Code plugin authors
+- **[11-packaging-and-distribution.md](11-packaging-and-distribution.md)** - Build requirements, plugin discovery, npm publishing
 
 ### Appendices
 

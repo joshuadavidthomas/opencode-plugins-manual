@@ -359,13 +359,34 @@ export const MyPlugin: Plugin = async (ctx) => {
 
 Source: `packages/plugin/src/index.ts:18-32`
 
-## Examples in the Wild
+## Official Auth Plugins
 
-For working examples of auth hooks:
+OpenCode ships with two auth plugins loaded by default. These serve as working examples of auth hook implementations.
 
-- **GitHub**: Search the codebase for GitHub OAuth implementation
-- **Linear**: Search for Linear API key authentication
-- **MCP servers**: Many MCP integrations use auth hooks
+**opencode-copilot-auth** ([npm](https://www.npmjs.com/package/opencode-copilot-auth))
+
+- OAuth device code flow for GitHub Copilot
+- Supports GitHub.com and GitHub Enterprise
+- Token refresh via Copilot API
+- Zero-cost billing for Copilot subscribers
+
+**opencode-anthropic-auth** ([npm](https://www.npmjs.com/package/opencode-anthropic-auth))
+
+- PKCE OAuth for Claude Pro/Max subscriptions
+- API key creation via Anthropic Console OAuth
+- Manual API key entry fallback
+- Zero-cost billing for Pro/Max subscribers
+
+Both are written in JavaScript with JSDoc type annotations. View the source on unpkg:
+
+- [opencode-copilot-auth/index.mjs](https://unpkg.com/opencode-copilot-auth/index.mjs)
+- [opencode-anthropic-auth/index.mjs](https://unpkg.com/opencode-anthropic-auth/index.mjs)
+
+To disable these default plugins:
+
+```bash
+OPENCODE_DISABLE_DEFAULT_PLUGINS=1 opencode
+```
 
 ## Further Reading
 

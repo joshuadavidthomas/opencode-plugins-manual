@@ -189,10 +189,10 @@ Plugins can be:
 
 OpenCode also auto-loads default plugins unless `OPENCODE_DISABLE_DEFAULT_PLUGINS` is set:
 
-- `opencode-copilot-auth@0.0.9`
-- `opencode-anthropic-auth@0.0.5`
+- `opencode-copilot-auth` - GitHub Copilot OAuth authentication
+- `opencode-anthropic-auth` - Anthropic OAuth (Claude Pro/Max) and API key creation
 
-See packages/opencode/src/plugin/index.ts:29-33
+See packages/opencode/src/plugin/index.ts:29-33 and [Auth Hook](09-auth-hook.md#official-auth-plugins) for details.
 
 ## Plugin Structure
 
