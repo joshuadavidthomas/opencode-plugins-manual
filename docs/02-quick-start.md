@@ -7,7 +7,7 @@ Plugins load from two locations:
 1. **Project plugins**: `.opencode/plugin/` directory in your project
 2. **Global plugins**: `~/.config/opencode/plugin/` directory
 
-> As of commit 3efc95b15
+> As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 OpenCode discovers plugin files and registers them from the `plugin` array in `opencode.json`. File-based plugins use the `file://` protocol.
 

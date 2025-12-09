@@ -21,7 +21,7 @@ A plugin implements hooks to receive lifecycle events and modify OpenCode behavi
 
 Modify the configuration at runtime. Use this to inject commands, agents, or MCP servers into the user's environment.
 
-> As of commit 3efc95b15
+> As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 **Type signature:**
 
@@ -64,7 +64,7 @@ export const MyPlugin: Plugin = async (ctx) => ({
 
 Register custom tools that the model can invoke.
 
-> As of commit 3efc95b15
+> As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 **Type signature:**
 
@@ -109,7 +109,7 @@ See [06-custom-tools.md](06-custom-tools.md) for complete documentation.
 
 Register authentication providers for LLM services.
 
-> As of commit 3efc95b15
+> As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 **Type signature:**
 
@@ -160,7 +160,7 @@ export const MyPlugin: Plugin = async (ctx) => ({
 
 Subscribe to all system events.
 
-> As of commit 3efc95b15
+> As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 **Type signature:**
 
@@ -211,7 +211,7 @@ export const MyPlugin: Plugin = async (ctx) => ({
 
 Process incoming user messages before they're sent to the model.
 
-> As of commit 3efc95b15
+> As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 **Type signature:**
 
@@ -268,7 +268,7 @@ export const MyPlugin: Plugin = async (ctx) => ({
 
 Modify parameters sent to the LLM.
 
-> As of commit 3efc95b15
+> As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 **Type signature:**
 
@@ -327,7 +327,7 @@ export const MyPlugin: Plugin = async (ctx) => ({
 
 Handle permission requests before they're shown to the user.
 
-> As of commit 3efc95b15
+> As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 **Type signature:**
 
@@ -374,7 +374,7 @@ export const MyPlugin: Plugin = async (ctx) => ({
 
 Intercept tool calls before execution.
 
-> As of commit 3efc95b15
+> As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 **Type signature:**
 
@@ -429,7 +429,7 @@ export const MyPlugin: Plugin = async (ctx) => ({
 
 Intercept tool results after execution.
 
-> As of commit 3efc95b15
+> As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 **Type signature:**
 
@@ -489,7 +489,7 @@ export const MyPlugin: Plugin = async (ctx) => ({
 
 Modify text after the model generates it.
 
-> As of commit 3efc95b15
+> As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 **Type signature:**
 

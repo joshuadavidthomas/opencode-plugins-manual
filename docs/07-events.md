@@ -6,7 +6,7 @@ OpenCode plugins subscribe to events through the `event` hook. The event system 
 
 ## How It Works
 
-> As of commit 3efc95b15
+> As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 The event bus lives in `packages/opencode/src/bus/index.ts:7-142`. Three functions define the pattern:
 

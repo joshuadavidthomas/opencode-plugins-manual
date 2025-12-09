@@ -2,7 +2,7 @@
 
 Documentation for OpenCode plugins, including undocumented features and Claude Code migration patterns.
 
-**Source commit**: 3efc95b15<br />
+**Source commit**: [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)<br />
 **Last refreshed**: 2025-12-09
 
 ## What This Is

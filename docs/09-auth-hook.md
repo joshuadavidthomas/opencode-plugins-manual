@@ -262,7 +262,7 @@ The loader returns an object that becomes available to other parts of your plugi
 
 ## TypeScript Definitions
 
-> As of commit 3efc95b15
+> As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 Full type definitions in `packages/plugin/src/index.ts:35-142`:
 

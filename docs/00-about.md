@@ -2,7 +2,7 @@
 
 - **Date**: 2025-12-09
 - **Model**: Claude Sonnet 4.5 (anthropic/claude-sonnet-4.5-20250929)
-- **Source commit**: 3efc95b15
+- **Source commit**: [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 ## Generation
 
@@ -35,7 +35,7 @@ This manual was created through a three-phase workflow documented in [`artifacts
 - Phase 3 (Advanced Topics): 3 files - events, SDK client, auth hooks
 - Phase 4 (Reference & Migration): 4 files - migration guide + appendices
 
-Each subagent explored the codebase using specialized agents and verified all code examples against source at commit 3efc95b15.
+Each subagent explored the codebase using specialized agents and verified all code examples against source at commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe).
 
 ## Contents
 

@@ -1,6 +1,6 @@
 # Config Schemas
 
-> As of commit 3efc95b15
+> As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 Complete schemas for command, agent, and MCP configuration.
 

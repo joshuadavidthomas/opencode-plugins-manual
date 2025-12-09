@@ -4,7 +4,7 @@
 
 The SDK client provides programmatic access to OpenCode's API. Use it to control sessions, read files, manage configuration, and interact with the running instance.
 
-> As of commit 3efc95b15
+> As of commit [3efc95b](https://github.com/sst/opencode/tree/3efc95b157e05bc3c42554be1b5778f8f1b64cfe)
 
 The client is auto-generated from OpenAPI specs. Source: `packages/sdk/js/src/gen/sdk.gen.ts`
 
